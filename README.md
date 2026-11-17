@@ -48,7 +48,7 @@ Os seis CRUDs em `/api/{recurso}` continuam exigindo autenticação administrati
 
 A proteção de escrita permite chamadas do frontend na mesma origem, com header específico. Origens diferentes, `Origin: null` e requisições cross-site permanecem bloqueadas. Clientes de API sem Origin continuam funcionando. Não configure o frontend em uma porta diferente sem revisar esse contrato.
 
-O Spring Boot não carrega `.env` por padrão. `.env.example` documenta as variáveis; exporte-as no terminal ou configure-as na IDE. Não versione senhas. A senha administrativa deve ter pelo menos 12 caracteres e no máximo 72 bytes UTF-8. Use HTTPS antes de expor a API fora de localhost.
+O Spring Boot não carrega `.env` por padrão. As variáveis da configuração manual acima podem ser exportadas no terminal ou configuradas na IDE. Não versione senhas. A senha administrativa deve ter pelo menos 12 caracteres e no máximo 72 bytes UTF-8. Use HTTPS antes de expor a API fora de localhost.
 
 ### PostgreSQL com Docker, opcional
 

@@ -3,7 +3,6 @@ target/
 .local/
 .env
 .env.*
-!.env.example
 .idea/
 *.iml
 *.log
