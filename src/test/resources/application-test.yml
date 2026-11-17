@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: ${TEST_DB_URL:jdbc:postgresql://127.0.0.1:55440/serene_test}
+    username: ${TEST_DB_USERNAME:serene_test}
+    password: ${TEST_DB_PASSWORD:}
+app:
+  admin:
+    username: test-admin
+    password: synthetic-test-password-only

@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: serene
+      POSTGRES_USER: serene
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Configure DB_PASSWORD no ambiente ou .env}
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - serene-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U serene -d serene"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+volumes:
+  serene-data:

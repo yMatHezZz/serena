@@ -1,0 +1,10 @@
+target/
+.tools/
+.local/
+.env
+.env.*
+!.env.example
+.idea/
+*.iml
+*.log
+.playwright-mcp/
